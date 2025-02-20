@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo com gradiente roxo */
+body {
+    background: linear-gradient(135deg, #7700ff, #360099);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Contêiner do formulário */
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Estilizando o título */
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #000000;
+}
+
+/* Estilizando os rótulos */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+/* Destaque ao clicar */
+input:focus {
+    border-bottom: 2px solid #7700ff;
+}
+
+/* Botão de envio estilizado */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #7700ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #41007e;
+}
+
+/* Efeito de luz suave */
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    filter: blur(40px);
+}
