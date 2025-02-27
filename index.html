@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
     <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
 </head>
+
 <body>
     <div class="form-container">
-        <h2>Formulário de Cadastro</h2>
-        <form id="cadastroForm">
-            <!-- Nome -->
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required minlength="5" maxlength="60" >
-
-            <!-- E-mail -->
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required minlength="5" maxlength="100">
-
-            <!-- Senha -->
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required minlength="8" maxlength="60">
-
-            <!-- Confirmar Senha -->
-            <label for="confirmar-senha">Confirmar Senha:</label>
-            <input type="password" id="confirmar-senha" name="confirmar-senha" required minlength="8" maxlength="60">
-
-            <!-- Cidade -->
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required minlength="2" maxlength="30">
-
-            <!-- Estado -->
-            <label for="estado">Estado:</label>
-            <input type="text" id="estado" name="estado" required minlength="2" maxlength="2">
-
+        <h2>Cadastro</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" maxlength="60">
+            <div class="erro mensagem"><span id="mensagem-erro-nome"></span></div>
+            
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" maxlength="100">
+            <div class="erro mensagem"><span id="mensagem-erro-email"></span></div>
+            
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" maxlength="60">
+            <div class="erro mensagem"><span id="mensagem-erro-senha"></span></div>
+            
+            <label for="confirmar_senha">Confirmar Senha</label>
+            <input type="password" name="confirmar_senha" id="confirmar_senha" maxlength="60">
+            <div class="erro mensagem"><span id="mensagem-erro-confSenha"></span></div>
+            
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" maxlength="30">
+            <div class="erro mensagem"><span id="mensagem-erro-cidade"></span></div>
+            
+            <label for="estado">Estado</label>
+            <input type="text" name="estado" id="estado" maxlength="2">
+            <div class="erro mensagem"><span id="mensagem-erro-estado"></span></div>
+            
             <button type="submit">Cadastrar</button>
         </form>
     </div>
-    <script src="https://gutoffline.github.io/cadastro-usuario/funcoes.js"></script>
-    <script src="appjs.js"></script>
+    
+    <script src="funcoes.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

@@ -67,7 +67,6 @@ function fnValidarEmail(email){
 module.exports = {
     fnValidarMinimoDeCaracteres,
     fnValidarCampoObrigatorio,
-    fnAdicionarMensagemDeErro,
     fnValidarSenhaIgual,
     fnValidarSenhaMaiuscula,
     fnValidarSenhaCaracterEspecial,

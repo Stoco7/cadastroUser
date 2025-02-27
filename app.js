@@ -54,6 +54,10 @@ document.getElementById("senha").addEventListener("blur", function () {
     if(caracterespecial == false){
         fnAdicionarMensagemDeErro("mensagem-erro-senha", "* Obrigatório caracter especial")
     }
+    let confSenhaigual = fnValidarSenhaIgual(this.value);
+    if(confSenhaigual == false){
+        fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
+    }
 })
 
 document.getElementById("confirmar_senha").addEventListener("blur", function () {
@@ -69,7 +73,7 @@ document.getElementById("confirmar_senha").addEventListener("blur", function () 
         fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Campo obrigatório");
     }
 
-    let confSenhaigual = fnValidarSenhaIgual(this.value);
+    let confSenhaigual = fnValidarSenhaIgual(this.getElementById("senha").value);
     if(confSenhaigual == false){
         fnAdicionarMensagemDeErro("mensagem-erro-confSenha", "* Senha incompatível");
     }
